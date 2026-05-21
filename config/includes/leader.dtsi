@@ -14,6 +14,10 @@
         }; \
     };
 
+&uc {
+  default-mode = <UC_MODE_MACOS>;
+};
+
 /* German umlauts */
 ZMK_LEADER_SEQUENCE(de_ae,      &uc UC_DE_AE,         A)  // ä
 ZMK_LEADER_SEQUENCE(de_oe,      &uc UC_DE_OE,         O)  // ö
@@ -53,4 +57,3 @@ ZMK_LEADER_SEQUENCE(ble,        &out OUT_BLE,   B L E)
 #endif // CONFIG_WIRELESS
 ZMK_LEADER_SEQUENCE(reset,      &sys_reset,     R E S E T)
 ZMK_LEADER_SEQUENCE(boot,       &bootloader,    B O O T)
-

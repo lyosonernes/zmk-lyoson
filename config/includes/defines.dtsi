@@ -1,0 +1,88 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#ifdef CONFIG_WIRELESS
+  #include <dt-bindings/zmk/bt.h>
+  #include <dt-bindings/zmk/outputs.h>
+  #define _BT_SEL_KEYS_                                                        \
+      &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR
+#else
+  #define _BT_SEL_KEYS_ &trans &trans &trans &trans &trans
+#endif
+
+/* ── Layer indices and layout config (edit layouts.dtsi to toggle) ──── */
+
+/* ── OS-specific keycodes ─────────────────────────────────────────────── */
+
+/* ── Keycode aliases (shifted symbols) ────────────────────────────────── */
+
+#define CANCEL    &kp K_CANCEL            // Cancel caps-word & auto-layers.
+#define DSK_PREV  &hmr LCTRL LG(LC(LEFT)) // Previous desktop.
+#define DSK_NEXT  &hmr LALT LG(LC(RIGHT)) // Next     desktop.
+#define PIN_WIN   &kp LG(LC(LS(Q)))       // Pin window across desktops.
+#define PIN_APP   &kp LG(LC(LS(A)))       // Pin application across desktops.
+#define DSK_MGR   &kp LA(GRAVE)           // Desktop manager.
+#define VOL_DOWN  &hmr RSHFT C_VOL_DN
+#define PAGE_PREV &kp LC(LEFT_ARROW)      // Navigate to previous page.
+#define PAGE_NEXT &kp LC(RIGHT_ARROW)     // Navigate to next page.
+
+#define _REDO       &kp LC(LS(Z))
+#define _UNDO       &kp LC(Z)
+#define _CUT        &kp LC(X)
+#define _COPY       &kp LC(C)
+#define _PASTE      &kp LC(V)
+#define FIND       &kp LC(F)
+#define FIND_NEXT  &kp LC(G)
+#define FIND_PREV  &kp LC(LS(G))
+
+
+/* ── Key positions ────────────────────────────────────────────────────── */
+
+#ifndef LH_NONE
+#define LH_NONE &none
+#endif
+#ifndef RH_NONE
+#define RH_NONE &none
+#endif
+
+
+#define XXX &none
+#define ___ &trans
+
+/* ── Configuration ────────────────────────────────────────────────────── */
+
+#define QUICK_TAP_MS 175
+
+#define COMBO_TERM 30
+#define COMBO_IDLE 50
+
+#include <zmk-helpers/helper.h>
+
+/* ── Global behavior config ──────────────────────────────────────────── */
+
+&sk {
+    release-after-ms = <900>;
+    quick-release;
+};
+
+&sl {
+    // release-after-ms = <3000>;
+    ignore-modifiers;
+};
+
+&lt {
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+// Trigger tap-action on all interrupts.
+#define MT_CORE                                                                \
+  flavor = "tap-preferred";                                                    \
+  tapping-term-ms = <220>;                                                     \
+  quick-tap-ms = <220>;                                                        \
+  hold-trigger-key-positions = <0>;
+
+&mt { MT_CORE };

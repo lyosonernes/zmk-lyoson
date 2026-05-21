@@ -3,12 +3,12 @@ parse_config:
     - "modules/zmk/helpers/include"
 
   zmk_preamble: |
-    #include <zmk-helpers/key-labels/34.h>
+    #include <zmk-helpers/key-labels/36.h>
     #define CONFIG_WIRELESS
 
   raw_binding_map:
-    "&sys_reset": Reset
-    "&bootloader": Boot
+    "&bootloader": {t: '$$mdi:progress-download$$', s: Boot}
+    "&sys_reset": {t: '$$mdi:restart$$', s: Reset}
     "&caps_word": Caps Word
     "&kp LA(F4)": Close
 
@@ -17,14 +17,21 @@ parse_config:
     "&bt BT_SEL 2": BT 3
     "&bt BT_SEL 3": BT 4
 
-    "&kp LC(INS)": Copy
-    "&kp LC(X)": Cut
-    "&kp LS(INS)": Paste
+    "&kp LC(INS)": $$mdi:content-copy$$
+    "&kp LC(X)": $$mdi:content-cut$$
+    "&kp LS(INS)": $$mdi:content-paste$$
 
+    "&kp LC(Z)": $$mdi:undo-variant$$
+    "&kp LC(LS(Z))": $$mdi:redo-variant$$
+  
     "&kp LG(LC(LEFT))": PDesk
     "&kp LG(LC(RIGHT))": NDesk
     "&kp LG(LC(LS(A)))": PinA.
     "&kp LG(LC(LS(Q)))": PinW.
+    "&kp LC(F)": $$mdi:magnify$$
+
+    "&kp LS(LBKT)": "{"
+    "&kp LS(RBKT)": "}"
 
     "&swapper": NWin
     "&kp LS(TAB)": PWin
@@ -32,6 +39,13 @@ parse_config:
     "&num_dance": { "t": "Smart"}
     "&magic_shift": { "t": Magic, "h": "Shift" }
     "&smart_mouse": Smart Mouse
+    "&t_btick": "```"
+    "&select_all": "SLC ALL"
+    "&select_none": "SLC NONE"
+    "&select_word": "SLC WRD"
+    "&extend_word": "EXT WRD"
+    "&select_line": "SLC LINE"
+    "&extend_line": "EXT LINE"
 
     "&hml LS(LALT)TAB": Tab
     "&hm_combo_ldr": Leader
@@ -56,6 +70,72 @@ parse_config:
     "&mkp MCLK": Middle Click
     "&mkp MB4": Back Click
     "&mkp MB5": Forward Click
+
+    "&sqt_dqt": {t: '''', s: '"'}
+    "&minus_slash": {t: '-', s: '/'}
+    "&dot_qmark": {t: '.', s: '?'}
+    "&comma_excl": {t: ',', s: '!'}
+    "&bspc_del": {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse$$'}
+    "&undo_redo": {t: '$$mdi:undo$$', s: '$$mdi:redo$$'}
+    "&copy_cut": {t: '$$mdi:content-copy$$', s: '$$mdi:content-cut$$'}
+    "&v_comma_excl": {t: ',', s: '!'}
+    "&v_dot_qmark": {t: '.', s: '?'}
+    "&thumb_bspc LSHFT 0": {t: '$$mdi:backspace$$', h: '$$mdi:arrow-up-bold$$', s: '$$mdi:backspace-reverse$$'}
+    # "&nav_ht NAV 0": {t: '$$mdi:keyboard-esc$$', h: Nav, s: '$$mdi:keyboard-tab$$'}
+    # "&thumb_spc NUM SPACE": {t: '$$mdi:keyboard-space$$', h: Symbol}
+    # "&lt NUM RET": {t: '$$mdi:keyboard-return$$', h: Num}
+    # "&lt NAV BSPC": {t: '$$mdi:backspace$$', h: Nav}
+    # "&num_repeat NUM 0": {t: '$$mdi:repeat$$', h: Num}
+    # "&sturdy_num_repeat NUM 0": {t: '$$mdi:repeat$$', h: Num}
+    # "&thumb_magic_1 LSHFT 0": {t: '$$mdi:arrow-up-bold$$'}
+    # "&nav_repeat NUM 0": {t: '$$mdi:repeat$$', h: Num}
+    # "&tog MOUSE": {t: Mouse, type: layer-activator}
+    # "&mouse_ht MOUSE MOUSE": {t: Mouse, type: layer-activator}
+    # "&to_graphite": {t: Graphite, type: layer-activator}
+    "&thumb_r SYM R": {t: R, h: Symbol}
+    "&nav_repeat NAV 0": {t: '$$mdi:repeat$$', h: Nav}
+    "&alpha_magic_racket_1": {t: '$$mdi:star-four-points$$'}
+    "&alpha_magic_sturdy": {t: '$$mdi:star-four-points$$'}
+    "&graphite_bigram_d": {t: D}
+    "&graphite_bigram_o": {t: O}
+    "&graphite_bigram_x": {t: X}
+    "&graphite_bigram_q": {t: Q}
+    "&graphite_hml_n LGUI": {t: N, h: ❖}
+    "&graphite_hml_n LGUI 0": {t: N, h: ❖}
+    "&graphite_hml_r LALT": {t: R, h: ⌥}
+    "&graphite_hml_r LALT 0": {t: R, h: ⌥}
+    "&to_racket": {t: Racket, type: layer-activator}
+    "&to_sturdy": {t: Sturdy, type: layer-activator}
+    "&to_vestnik": {t: Vestnik, type: layer-activator}
+    # "&sl FUN": {t: Fn}
+    # "&sl SYS": {t: System, type: layer-activator}
+    "&soft_off": {t: '$$mdi:keyboard-off-outline$$'}
+    "&lang_en": {t: EN}
+    "&lang_ru": {t: RU}
+    "&bt_0": {t: BT 0}
+    "&bt_1": {t: BT 1}
+    "&bt_2": {t: BT 2}
+    "&bt_3": {t: BT 3}
+    "&kp LC(LS(TAB))": {t: Tab ←}
+    "&kp LC(TAB)": {t: Tab →}
+    "&kp LC(A)": {t: Tmux}
+    "&kp _SCR_AREA": {t: '$$mdi:crop$$', s: Scr}
+    "&kp _SCR_FULL": {t: '$$mdi:monitor-screenshot$$', s: Scr}
+    "&kp _SHUTDOWN": {t: '$$mdi:power$$'}
+    "&kp C_POWER": {t: '$$mdi:power$$'}
+    "&kp K_POWER": {t: '$$mdi:power$$'}
+    "&kp _LOCK": {t: '$$mdi:lock$$'}
+    "&kp LG(LS(L))": {t: '$$mdi:lock$$'}
+    "&kp LG(L)": {t: '$$mdi:lock$$'}
+    "&kp C_SLEEP": {t: '$$mdi:moon-waning-crescent$$'}
+    "&kp C_MUTE": {t: '$$mdi:volume-mute$$'}
+    "&kp C_PP": {t: '$$mdi:play-pause$$'}
+    "&kp C_PREV": {t: '$$mdi:skip-previous$$'}
+    "&kp C_NEXT": {t: '$$mdi:skip-next$$'}
+    "&kp LG(F9)": {t: '$$mdi:microphone-off$$'}
+    "&kp LG(O)": {t: Space ←}
+    "&kp LG(U)": {t: Space →}
+    "&kp LG(LA(S))": {t: STT}
 
   trans_legend: { "t": "", "type": "trans" }
 
@@ -171,11 +251,12 @@ parse_config:
     TILDE2: "~"
     UNDER: _
     UNDERSCORE: _
+    
 
 draw_config:
   append_colon_to_layer_header: false
   dark_mode: false
-  footer_text: "urob/zmk-config"
+  # footer_text: "urob/zmk-config"
   glyph_tap_size: 15
   glyph_hold_size: 12
   glyph_shifted_size: 10
