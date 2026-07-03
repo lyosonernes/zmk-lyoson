@@ -34,8 +34,7 @@ ZMK_ADAPTIVE_KEY(thumb_magic_1_adaptive, bindings = <&sk LSHFT>;
     };
 )
 
-ZMK_MOD_MORPH(thumb_magic_1_tap, bindings = <&thumb_magic_1_adaptive>, <&caps_word>;
-              mods = <(MOD_LSFT)>;)
+ZMK_MOD_MORPH(thumb_magic_1_tap, bindings = <&thumb_magic_1_adaptive>, <&caps_word>; mods = <(MOD_LSFT)>;)
 
 ZMK_HOLD_TAP(thumb_magic_1, bindings = <&kp>, <&thumb_magic_1_tap>;
              flavor = "balanced"; tapping-term-ms = <200>;
@@ -44,10 +43,12 @@ ZMK_HOLD_TAP(thumb_magic_1, bindings = <&kp>, <&thumb_magic_1_tap>;
 ZMK_HOLD_TAP(num_repeat, bindings = <&mo>, <&key_repeat>;
              flavor = "balanced"; tapping-term-ms = <175>;
              quick-tap-ms = <QUICK_TAP_MS>;)
-&caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
+
+             &caps_word { // Mods deactivate caps-word, requires PR #1451. [TODO: rebase]
   /delete-property/ ignore-modifiers;
 };
 
+// Magic Repeat/Shift/Capsword: Tap: repeat/sk shift | hold: lshift | double tap: CAPS_WORD
 #define THUMB_MAGIC &thumb_magic_1 LSHFT 0
 
 /* ── Auto Layers ─────────────────────────────────────────────────────── */

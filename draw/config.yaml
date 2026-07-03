@@ -17,9 +17,9 @@ parse_config:
     "&bt BT_SEL 2": BT 3
     "&bt BT_SEL 3": BT 4
 
-    "&kp LC(INS)": $$mdi:content-copy$$
+    "&kp LC(C)": $$mdi:content-copy$$
     "&kp LC(X)": $$mdi:content-cut$$
-    "&kp LS(INS)": $$mdi:content-paste$$
+    "&kp LC(V)": $$mdi:content-paste$$
 
     "&kp LC(Z)": $$mdi:undo-variant$$
     "&kp LC(LS(Z))": $$mdi:redo-variant$$
@@ -34,10 +34,11 @@ parse_config:
     "&kp LS(RBKT)": "}"
 
     "&swapper": NWin
-    "&kp LS(TAB)": PWin
+    # "&kp LS(TAB)": PWin 
     "&dot_spc": Sentence
     "&num_dance": { "t": "Smart"}
     "&magic_shift": { "t": Magic, "h": "Shift" }
+    "&thumb_magic_1 LSHFT 0": { "t": Magic, "h": "Shift" }
     "&smart_mouse": Smart Mouse
     "&t_btick": "```"
     "&select_all": "SLC ALL"
@@ -52,8 +53,8 @@ parse_config:
     "&hm_combo_ldrsh": Shift+Leader
     "&hm_combo_lpar": { "t": "< (" }
     "&hm_combo_rpar": { "t": "> )"}
-    "&kp LBKT": { "t": "{ ["}
-    "&kp RBKT": { "t": "} ]"}
+    "&kp LBKT": { "t": "["}
+    "&kp RBKT": { "t": "]"}
 
     "&mmv MOVE_UP": Mouse ↑
     "&mmv MOVE_DOWN": Mouse ↓
@@ -81,7 +82,7 @@ parse_config:
     "&v_comma_excl": {t: ',', s: '!'}
     "&v_dot_qmark": {t: '.', s: '?'}
     "&thumb_bspc LSHFT 0": {t: '$$mdi:backspace$$', h: '$$mdi:arrow-up-bold$$', s: '$$mdi:backspace-reverse$$'}
-    # "&nav_ht NAV 0": {t: '$$mdi:keyboard-esc$$', h: Nav, s: '$$mdi:keyboard-tab$$'}
+    "&nav_ht NAV 0": {t: '$$mdi:keyboard-esc$$', h: Nav, s: '$$mdi:keyboard-tab$$'}
     # "&thumb_spc NUM SPACE": {t: '$$mdi:keyboard-space$$', h: Symbol}
     # "&lt NUM RET": {t: '$$mdi:keyboard-return$$', h: Num}
     # "&lt NAV BSPC": {t: '$$mdi:backspace$$', h: Nav}
