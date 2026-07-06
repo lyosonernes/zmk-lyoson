@@ -12,6 +12,9 @@
 <svg id="mdi:magnify">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-magnify" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
 </svg>
+<svg id="mdi:play-pause">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-play-pause" viewBox="0 0 24 24"><path d="M3,5V19L11,12M13,19H16V5H13M18,5V19H21V5" /></svg>
+</svg>
 <svg id="mdi:progress-download">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-progress-download" viewBox="0 0 24 24"><path d="M13,2.03C17.73,2.5 21.5,6.25 21.95,11C22.5,16.5 18.5,21.38 13,21.93V19.93C16.64,19.5 19.5,16.61 19.96,12.97C20.5,8.58 17.39,4.59 13,4.05V2.05L13,2.03M11,2.06V4.06C9.57,4.26 8.22,4.84 7.1,5.74L5.67,4.26C7.19,3 9.05,2.25 11,2.06M4.26,5.67L5.69,7.1C4.8,8.23 4.24,9.58 4.05,11H2.05C2.25,9.04 3,7.19 4.26,5.67M2.06,13H4.06C4.24,14.42 4.81,15.77 5.69,16.9L4.27,18.33C3.03,16.81 2.26,14.96 2.06,13M7.1,18.37C8.23,19.25 9.58,19.82 11,20V22C9.04,21.79 7.18,21 5.67,19.74L7.1,18.37M12,16.5L7.5,12H11V8H13V12H16.5L12,16.5Z" /></svg>
 </svg>
@@ -20,6 +23,12 @@
 </svg>
 <svg id="mdi:restart">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-restart" viewBox="0 0 24 24"><path d="M12,4C14.1,4 16.1,4.8 17.6,6.3C20.7,9.4 20.7,14.5 17.6,17.6C15.8,19.5 13.3,20.2 10.9,19.9L11.4,17.9C13.1,18.1 14.9,17.5 16.2,16.2C18.5,13.9 18.5,10.1 16.2,7.7C15.1,6.6 13.5,6 12,6V10.6L7,5.6L12,0.6V4M6.3,17.6C3.7,15 3.3,11 5.1,7.9L6.6,9.4C5.5,11.6 5.9,14.4 7.8,16.2C8.3,16.7 8.9,17.1 9.6,17.4L9,19.4C8,19 7.1,18.4 6.3,17.6Z" /></svg>
+</svg>
+<svg id="mdi:skip-next">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-skip-next" viewBox="0 0 24 24"><path d="M16,18H18V6H16M6,18L14.5,12L6,6V18Z" /></svg>
+</svg>
+<svg id="mdi:skip-previous">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-skip-previous" viewBox="0 0 24 24"><path d="M6,18V6H8V18H6M9.5,12L18,6V18L9.5,12Z" /></svg>
 </svg>
 <svg id="mdi:undo-variant">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-undo-variant" viewBox="0 0 24 24"><path d="M13.5,7A6.5,6.5 0 0,1 20,13.5A6.5,6.5 0 0,1 13.5,20H10V18H13.5C16,18 18,16 18,13.5C18,11 16,9 13.5,9H7.83L10.91,12.09L9.5,13.5L4,8L9.5,2.5L10.92,3.91L7.83,7H13.5M6,18H8V20H6V18Z" /></svg>
@@ -87,11 +96,11 @@ text.tr, use.tr { fill: var(--color-nav); }
 text.bl, use.bl { fill: var(--color-num); }
 text.br, use.br { fill: var(--color-sys); }
 
-.keypos-30 text.hold { fill: var(--color-nav); }
-.keypos-31 text.hold { fill: var(--color-fn); }
-.keypos-32 text.hold { fill: var(--color-num); font-size: 15px; }
-.keypos-32 text.tap  { fill: var(--color-num); }
-.keypos-33 text.hold { font-size: 15px; }
+.keypos-42 text.hold { fill: var(--color-nav); }
+.keypos-44 text.hold { fill: var(--color-fn); }
+.keypos-40 text.hold { fill: var(--color-num); font-size: 15px; }
+.keypos-40 text.tap  { fill: var(--color-num); }
+.keypos-43 text.hold { font-size: 15px; }
 
 .icon-tabler > path                             { fill: inherit; stroke: inherit; stroke-width: 2; }
 .icon-tabler > path[stroke="none"][fill="none"] { visibility: hidden; }
@@ -266,15 +275,19 @@ text.br, use.br { fill: var(--color-sys); }
 </g>
 <g transform="translate(140, 207)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">(</text>
 </g>
 <g transform="translate(196, 196)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">)</text>
 </g>
 <g transform="translate(784, 196)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">[</text>
 </g>
 <g transform="translate(840, 207)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">]</text>
 </g>
 <g transform="translate(344, 232) rotate(15.0)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -328,6 +341,8 @@ text.br, use.br { fill: var(--color-sys); }
 </g>
 <g transform="translate(653, 285) rotate(-15.0)" class="key keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">Del</text>
+<text x="0" y="22" class="key hold">Ctl+Del</text>
 </g>
 </g>
 </g>
@@ -693,15 +708,23 @@ text.br, use.br { fill: var(--color-sys); }
 </g>
 <g transform="translate(140, 207)" class="key keypos-36">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:undo-variant" xlink:href="#mdi:undo-variant" x="-8" y="-6" height="15" width="15.0" class="key tap glyph mdi:undo-variant"/>
 </g>
 <g transform="translate(196, 196)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:redo-variant" xlink:href="#mdi:redo-variant" x="-8" y="-6" height="15" width="15.0" class="key tap glyph mdi:redo-variant"/>
 </g>
 <g transform="translate(784, 196)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">
+<tspan x="0" dy="-0.6em">Tab</tspan><tspan x="0" dy="1.2em">←</tspan>
+</text>
 </g>
 <g transform="translate(840, 207)" class="key keypos-39">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">
+<tspan x="0" dy="-0.6em">Tab</tspan><tspan x="0" dy="1.2em">→</tspan>
+</text>
 </g>
 <g transform="translate(344, 232) rotate(15.0)" class="key trans keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
@@ -727,7 +750,7 @@ text.br, use.br { fill: var(--color-sys); }
 <g transform="translate(636, 232) rotate(-15.0)" class="key keypos-45">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <text x="0" y="1" class="key tap">
-<tspan x="0" dy="-0.6em">EXT</tspan><tspan x="0" dy="1.2em">WRD</tspan>
+<tspan x="0" dy="-0.6em">SLC</tspan><tspan x="0" dy="1.2em">ALL</tspan>
 </text>
 </g>
 <g transform="translate(327, 286) rotate(15.0)" class="key keypos-46">
@@ -741,12 +764,21 @@ text.br, use.br { fill: var(--color-sys); }
 </g>
 <g transform="translate(547, 329) rotate(-25.0)" class="key keypos-49">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">
+<tspan x="0" dy="-0.6em">EXT</tspan><tspan x="0" dy="1.2em">WRD</tspan>
+</text>
 </g>
 <g transform="translate(600, 306) rotate(-20.0)" class="key keypos-50">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">
+<tspan x="0" dy="-0.6em">EXT</tspan><tspan x="0" dy="1.2em">LINE</tspan>
+</text>
 </g>
 <g transform="translate(653, 285) rotate(-15.0)" class="key keypos-51">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<text x="0" y="1" class="key tap">
+<tspan x="0" dy="-0.6em">SLC</tspan><tspan x="0" dy="1.2em">NONE</tspan>
+</text>
 </g>
 </g>
 </g>
@@ -968,8 +1000,9 @@ text.br, use.br { fill: var(--color-sys); }
 <g transform="translate(308, 50)" class="key trans keypos-5">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 </g>
-<g transform="translate(672, 50)" class="key trans keypos-6">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<g transform="translate(672, 50)" class="key keypos-6">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:skip-previous" xlink:href="#mdi:skip-previous" x="-8" y="-6" height="15" width="15.0" class="key tap glyph mdi:skip-previous"/>
 </g>
 <g transform="translate(728, 39)" class="key keypos-7">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1016,8 +1049,9 @@ text.br, use.br { fill: var(--color-sys); }
 <g transform="translate(308, 106)" class="key trans keypos-17">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 </g>
-<g transform="translate(672, 106)" class="key trans keypos-18">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<g transform="translate(672, 106)" class="key keypos-18">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:play-pause" xlink:href="#mdi:play-pause" x="-8" y="-6" height="15" width="15.0" class="key tap glyph mdi:play-pause"/>
 </g>
 <g transform="translate(728, 95)" class="key keypos-19">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1056,8 +1090,9 @@ text.br, use.br { fill: var(--color-sys); }
 <g transform="translate(308, 162)" class="key trans keypos-29">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 </g>
-<g transform="translate(672, 162)" class="key trans keypos-30">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<g transform="translate(672, 162)" class="key keypos-30">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
+<use href="#mdi:skip-next" xlink:href="#mdi:skip-next" x="-8" y="-6" height="15" width="15.0" class="key tap glyph mdi:skip-next"/>
 </g>
 <g transform="translate(728, 151)" class="key keypos-31">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

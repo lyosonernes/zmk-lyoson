@@ -119,6 +119,8 @@ parse_config:
     "&bt_3": {t: BT 3}
     "&kp LC(LS(TAB))": {t: Tab ←}
     "&kp LC(TAB)": {t: Tab →}
+    "&kp LC(LS(LBKT))": {t: Tab ←}
+    "&kp LC(LS(RBKT))": {t: Tab →}
     "&kp LC(A)": {t: Tmux}
     "&kp _SCR_AREA": {t: '$$mdi:crop$$', s: Scr}
     "&kp _SCR_FULL": {t: '$$mdi:monitor-screenshot$$', s: Scr}
@@ -329,11 +331,11 @@ draw_config:
     text.bl, use.bl { fill: var(--color-num); }
     text.br, use.br { fill: var(--color-sys); }
 
-    .keypos-30 text.hold { fill: var(--color-nav); }
-    .keypos-31 text.hold { fill: var(--color-fn); }
-    .keypos-32 text.hold { fill: var(--color-num); font-size: 15px; }
-    .keypos-32 text.tap  { fill: var(--color-num); }
-    .keypos-33 text.hold { font-size: 15px; }
+    .keypos-42 text.hold { fill: var(--color-nav); }
+    .keypos-44 text.hold { fill: var(--color-fn); }
+    .keypos-40 text.hold { fill: var(--color-num); font-size: 15px; }
+    .keypos-40 text.tap  { fill: var(--color-num); }
+    .keypos-43 text.hold { font-size: 15px; }
 
     .icon-tabler > path                             { fill: inherit; stroke: inherit; stroke-width: 2; }
     .icon-tabler > path[stroke="none"][fill="none"] { visibility: hidden; }

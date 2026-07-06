@@ -27,6 +27,8 @@
 #define VOL_DOWN  &hmr RSHFT C_VOL_DN
 #define PAGE_PREV &kp LC(LEFT_ARROW)      // Navigate to previous page.
 #define PAGE_NEXT &kp LC(RIGHT_ARROW)     // Navigate to next page.
+#define TAB_PREV  &kp LC(LS(LBKT))        // Previous TAB
+#define TAB_NEXT  &kp LC(LS(RBKT))        // Previous TAB
 
 #define _REDO       &kp LC(LS(Z))
 #define _UNDO       &kp LC(Z)
