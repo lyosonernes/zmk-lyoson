@@ -20,3 +20,7 @@ include:
     shield: corne_right nice_view_adapter nice_view_gem
   - board: glove80_lh
   - board: glove80_rh
+  - board: assimilator-bt
+    shield: imprint_left
+  - board: assimilator-bt
+    shield: imprint_right

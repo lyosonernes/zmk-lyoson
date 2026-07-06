@@ -63,6 +63,7 @@ draw: _check_yq_version
     yq -Yi '.combos.[].l = ["Combos"]' "{{ draw }}/base.yaml"
     # keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -k "chocofi" >"{{ draw }}/base.svg"
     keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" -j "config/imprint.json" >"{{ draw }}/base.svg"
+    # keymap -c "{{ draw }}/config.yaml" draw "{{ draw }}/base.yaml" --dts-layout modules/zmk/zmk-keyboards/boards/shields/imprint/imprint-layouts.dtsi --layout-name physical_layout_imprint_letters_only >"{{ draw }}/base.svg"
 
     jq_expr='
         def extract_label: if type == "string" then . else .t end;

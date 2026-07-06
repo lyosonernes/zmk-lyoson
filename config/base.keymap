@@ -24,8 +24,8 @@ ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS) // FN + NUM --> SYS.
 // ZMK_COMBO(system_combo, &sl SYS,   LH0 RH0, ALPHA_LAYERS,   COMBO_TERM, COMBO_IDLE)
 
 #ifndef ZMK_BASE_LAYER
-  #define ZMK_BASE_LAYER(name, LT0, LT, RT, RT0, LM0, LM, RM, RM0, LB0, LB, RB, RB0, LBB, RBB, LH, RH, LH1, RH1)                 \
-      ZMK_LAYER(name, LT0 LT RT RT0 LM0 LM RM RM0 LB0 LB RB RB0 LBB RBB LH RH LH1 RH1)
+  #define ZMK_BASE_LAYER(name, LT5, LT, RT, RT5, LM5, LM, RM, RM5, LB5, LB, RB, RB5, LF, RF, LH, RH, LH1, RH1)                 \
+      ZMK_LAYER(name, LT5 LT RT RT5 LM5 LM RM RM5 LB5 LB RB RB5 LF RF LH RH LH1 RH1)
 #endif
 
 /* ── Alpha layers ────────────────────────────────────────────────────── */

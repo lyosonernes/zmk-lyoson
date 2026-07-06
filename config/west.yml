@@ -60,7 +60,7 @@ manifest:
     - name: zmk-keyboards
       path: modules/zmk/zmk-keyboards
       remote: Cyboard-DigitalTailor
-      revision: 2ca51095
+      revision: c3572a41a44fd55deec86ada6548205960d442c1
       import: config/west.yml
 
     - name: nice-view-gem
